@@ -1,0 +1,87 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+
+
+
+    <!-- start 2 section container -->
+    <div class="contactus-container container">
+        <div class="row">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+
+            <!-- Side a 1 kore bad deyar pore workspace below -->
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <div>
+                    <div class="container us-info-pd">
+                        <div class="row gy-3">
+                            <div class="ol-btn-wrapper col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <button id="btn-new">New</button>
+                                <button id="btn-waiting">Waiting</button>
+                                <button id="btn-completed">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row gy-3">
+                            <div class="ol-content-container col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                
+                                <div class="common new-container" id="new_container">
+                                <% for (let i = 0; i < OrderList.length; i++) { %>
+                                    <% if (OrderList[i].Status==="Running") { %>
+
+                                        <div class="ol-one">
+                                            <div class="title"><%= OrderList[i].Gig.title %></div>
+                                            <div class="Status"><%= OrderList[i].Status %></div>
+                                            <div class="price"><%= OrderList[i].Gig.price %></div>
+                                            <div class="ol-view">
+                                              <a href="/Order/<%= OrderList[i].id %>"><button type="button">view</button></a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                <% } %>
+                                </div>
+                                <div class="common waiting-container" id="waiting_container">
+                                <% for (let i = 0; i < OrderList.length; i++) { %>
+                                    <% if (OrderList[i].Status==="Waiting") { %>
+                                        <div class="ol-one">
+                                            <div class="title"><%= OrderList[i].Gig.title %></div>
+                                            <div class="Status"><%= OrderList[i].Status %></div>
+                                            <div class="price"><%= OrderList[i].Gig.price %></div>
+                                            <div class="ol-view">
+                                                <a href="/Order/<%= OrderList[i].id %>"><button type="button">view</button></a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                <% } %>
+                                </div>
+                                <div class="common completed-container" id="completed_container">
+                                <% for (let i = 0; i < OrderList.length; i++) { %>
+                                      <% if (OrderList[i].Status==="Complete") { %>
+                                        
+                                        <div class="ol-one">
+                                            <div class="title"><%= OrderList[i].Gig.title %></div>
+                                            <div class="Status"><%= OrderList[i].Status %></div>
+                                            <div class="price"><%= OrderList[i].Gig.price %></div>
+                                            <div class="ol-view">
+                                                <a href="/Order/<%= OrderList[i].id %>"><button type="button">view</button></a>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                <% } %>
+                                </div>
+                                
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+        </div>
+    </div>
+    <!-- start 2 section container -->
+
+
+<%- include("_footer") %>
+<script src="/Vendor/js/script_tushar.js"></script>
+<%- include("_end") %>

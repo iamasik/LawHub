@@ -1,0 +1,181 @@
+<%- include("_start") %>
+<!-- Logo section -->
+    <div class="logo-container">
+      <a href="/"><img src="./Asset/Logo/icontext.png" alt="icontext"></a>
+    </div>
+    <!-- End Logo section -->
+
+    <!-- Form Title -->
+    <div class="reg-title">
+      <h4>Regirstration Form</h4>
+    </div>
+    <!-- End Form Title -->
+
+    <!-- Form Start -->
+    <div class="reg-form-wrapper">
+      <div class="form-container container">
+        <div class="row">
+          <div
+            class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12"
+          ></div>
+          <div
+            class="reg-form-container col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12"
+          >
+            <div class="reg-form-top">
+              <div class="bor-1">
+                <div class="bor-2">
+                    <h5>Basic Information Section</h5>
+                    <div class="message" style="text-align: center; padding-top: 10px;">
+                    </div>
+                </div>
+              </div>
+              <div class="reg-form-holder">
+                <div class="container">
+                  <form class="SingUp" action="#" method="post">
+                  <div class="row">
+                    
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="name">Name:</label><br>
+                      <input class="input-same" type="text" name="name" id="name" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="mail">Email:</label><br>
+                      <input class="input-same" type="text" name="mail" id="mail" placeholder="example@domail.com">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="phone">Phone:</label><br>
+                      <input class="input-same" type="text" name="phone" id="phone" placeholder="+8801783001045">
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="dob">Date of Borth:</label><br>
+                      <input class="input-same" type="date" name="dob" id="dob"> 
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="nidbc">National ID / Birth Certificate:</label><br>
+                      <input class="input-same" type="number" name="nidbc" id="nidbc" placeholder="Enter your N_ID or B_ID No:">
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="Gender">Gender:</label><br>
+                      <select name="role" id="Gender">
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="district">District:</label><br>
+                      <select name="district" id="district">
+                        <option value="Dhaka">Select One</option>
+                        <% for (let i = 0; i < Districs.length; i++) { %>
+                          <option value="<%= Districs[i] %>"><%= Districs[i] %></option>
+                        <% } %>
+                        
+                      </select>
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="upazila">Upazila:</label><br>
+                      <input class="input-same" type="text" name="upazila" id="upazila" placeholder="Enter your upazila:">
+
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="postoffice">Postoffice:</label><br>
+                      <input class="input-same" type="text" name="postoffice" id="postoffice" placeholder="Enter your postoffice:">
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="mail">Village/Town/Road/House:</label><br>
+                      <textarea class="" name="address" id="address" placeholder="Enter your address"></textarea>
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="role">Role:</label><br>
+                      <select name="role" id="role">
+                        <option value="none">Select One</option>
+                        <option value="Lawyer">Lawyer</option>
+                        <option value="Buyer">Buyer</option>
+                      </select>
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+    
+                  </div>
+
+                  <div class="row security-section">
+                    <div class="security-bor-1 col">
+                          <h5>Security Section</h5>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="usname">Usename:</label><br>
+                      <input class="input-same" type="text" name="usname" id="usname" placeholder="Enter username">
+                    </div>
+
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="pwd">Password:</label><br>
+                      <input class="input-same" type="password" name="pwd" id="pwd" placeholder="Enter password">
+                    </div>
+                  </div>
+                  
+                  <div class="row reg-form-flex-container">
+                    <div class="item-1 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12"><br>
+                     <input type="submit" value="Submit">
+                    </div>
+
+                    <div class="item-2 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12"></div>
+
+                    <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+                      <label class="label-same" for="cpwd">Confirm Password:</label><br>
+                      <input class="input-same" type="password" name="cpwd" id="cpwd" placeholder="Confirm your password">
+                    </div>
+                  </div>
+                  
+                </form>
+                </div>
+              </div>
+                
+            </div>
+          </div>
+          <div
+            class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <!-- Form End -->
+    <%- include("_footer") %>
+    <script src="/Vendor/js/singup.js"></script>
+    <%- include("_end") %>

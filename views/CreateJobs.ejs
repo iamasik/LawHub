@@ -1,0 +1,101 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+
+    <!-- Form Title -->
+    <div style="margin-top: 30px;">
+    </div>
+    <!-- End Form Title -->
+
+    <!-- Form Start -->
+    <div class="reg-form-wrapper" style="padding-bottom: 20px; padding-top: 50px;">
+      <div class="form-container container">
+        <div class="row">
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12"
+          ></div>
+          <div
+            class="reg-form-container col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12"
+          >
+            <div class="reg-form-top">
+              <div class="bor-1">
+                <div class="bor-2">
+                    <h5>Creating New Job</h5>
+                </div>
+                <div class="message" style="text-align: center; padding-top: 10px;">
+                </div>
+              </div>
+              <div class="reg-form-holder">
+                <div class="container">
+                    <form class="NewGig" action="">
+                        <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                              <label class="label-same" for="Title">Title:</label><br>
+                              <input class="input-same" type="text" name="Title" id="Title" placeholder="Write GiG title">
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                              <label class="label-same" for="Category">Category:</label><br>
+                              <select name="Category" id="Category">
+                                <% for (let i = 0; i < AllCat.length; i++) { %>
+                                  <option value="<%= AllCat[i].id %>"><%= AllCat[i].name  %></option>
+                                <% } %>
+                              </select>
+                            </div>
+                          </div>
+                          
+                          <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label class="label-same" for="service-price">Service Price:</label><br>
+                                <input class="input-same" type="number" name="service-price" id="service-price" placeholder="$500">
+                            </div>
+                          </div>
+        
+        
+                          <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                              <label class="label-same" for="Keyword">Keyword:</label><br>
+                              <input class="input-same" type="text" name="Keyword" id="Keyword" placeholder="lorem, ipsum, dollers">
+                            </div>
+                          </div>
+        
+                          <div class="row">
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label class="label-same" for="description">Description:</label><br>
+                              <textarea class="" name="description" id="description" placeholder="Write your service details"></textarea>
+                            </div>
+                          </div>
+        
+        
+        
+                          <div class="row reg-form-flex-container">
+                            <div class="item-1 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"><br>
+                             <input type="submit" value="Create">
+                            </div>
+        
+                        </div>
+                    </form>
+              </div>
+                
+            </div>
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12"
+          ></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+    <!-- Form End -->
+
+
+
+
+
+
+<%- include("_footer") %>
+<script src="/Vendor/js/createNewJobs.js"></script>
+<%- include("_end") %>

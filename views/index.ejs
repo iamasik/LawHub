@@ -1,0 +1,167 @@
+<%- include("_start") %>
+<%- include("_nav") %>
+
+    <!-- Hero Start -->
+      <div class="container">
+        <div class="hero_contaienr">
+          <div class="row">
+            <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-0 col-sm-0 col-12"></div>
+            <div class="col-xxl-11 col-xl-11 col-lg-11 col-md-12 col-sm-12 col-12">
+              <div class="container">
+                <div class="row DataMiddle">
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+  
+                    <div class="HeroBody">
+                      <h1>
+                        Justice is <br />
+                        non-negotiable
+                      </h1>
+                      <p class="HeroSubText">Find the perfect lawyer today</p>
+                      <div class="search">
+                        <form class="search_item" action="">
+                          <input
+                            class="search_field"
+                            type="search"
+                            name="search"
+                            id="search"
+                            placeholder="Search your required service"
+                          />
+                          <input class="search_btn" type="submit" value="Find" />
+                        </form>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+
+                  <div class="heroImg">
+                      <img src="./Asset/icons/heroimg.png" alt="" srcset="" />
+                  </div>
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-0 col-xl-0 col-lg-0 col-md-0 col-sm-0 col-12"></div>
+          </div>
+        </div>
+      </div>
+
+    <!-- End Hero -->
+
+    <!-- Popular Service -->
+
+    <div class="popular_service">
+      <div class="container">
+        <div class="row">
+          <div class="left col-xxl-1 colxl-1 col-lg-1 col-md-1 col-sm-1"></div>
+          <div class="mid col-xxl-10 colxl-10 col-lg-10 col-md-10 col-sm-10">
+            <p>Popular services</p>
+          </div>
+          <div class="right col-xxl-1 colxl-1 col-lg-1 col-md-1 col-sm-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Popular service -->
+
+    <!-- 4blocks -->
+    <div class="fourblock_holder">
+      <div class="container">
+        <div class="row">
+          <% for (let i = 0; i < 4; i++) { %>
+            <div class="blocks block1 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+              <div class="card" style="width: 13rem">
+                <img
+                  src="/Asset/images/dummy.png"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body" style="text-align: center;">
+                  <h5 class="card-title">
+                    <%= top4Data[i].name %>
+                  </h5>
+                  <p class="card-text"><%= top4Data[i].total %></p>
+                  <a href="/catView/<%= AllCat[i].id %>" class="btn_explore">Explore Now</a>
+                </div>
+              </div>
+            </div>
+
+          <% } %>
+
+        </div>
+      </div>
+    </div>
+    <!-- end 4 blocks -->
+
+    <!-- 2 Blocks sections -->
+
+    <div class="two-block-wrapper">
+      <div class="container">
+        <div class="row gx-0 gy-3">
+          <div class="index-2sec-1 col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+            <h4>What Are the Advantages of Hriring Lawyers Online?</h4>
+            <p class="para1"> <span>Complete transparency: </span>By communicating online with your lawyer, you will always have a document to refer to if you have any questions in the future. Very often, discussing legal options with a lawyer can be overwhelming</p>
+
+            <p class="para2"> <span>Time saving: </span>If you work a lot or are a single parent. It may be challenging for you to find the time in your day to get to a meeting with a lawyer. </p>
+
+          </div>
+          <div class="image-box col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+            <div class="iamge-holder">
+              <img class="img-fluid" src="./Asset/images/vidimg.PNG" alt="video_image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  End 2 Blocks sections -->
+
+
+
+    <!-- All Count cases... other things -->
+
+    <div class="count">
+      <!-- container -->
+      <div class="container count_inside">
+        <!-- Grid row -->
+            <div class="row count_inside-row">
+              <!-- grid Column -->
+          <div class="count_inside-row-col col-xxl-12 colxl-12 col-lg-12 col-md-12 mb-12 mb-md-0">
+            <div class="bg">
+              <div class="contaienr">
+                <div class="row">
+                  <div class="col-xxl-3 colxl-3 col-lg-3 col-md-6 mb-1 mb-md-0 text-center pdb mob-pdb">
+                    <h2><%= User %></h2>
+                    <h2>Clients</h2>
+                  </div>
+                  <div class="col-xxl-3 colxl-3 col-lg-3 col-md-6 mb-1 mb-md-0 text-center pdb mob-pdb">
+                    <h2><%= Lawyer %></h2>
+                    <h2>Lawyers</h2>
+                  </div>
+                  <div class="col-xxl-3 colxl-3 col-lg-3 col-md-6 mb-1 mb-md-0 text-center mob-pdb">
+                    <h2><%= SolvedOrder %></h2>
+                    <h2>Case Solved</h2>
+                  </div>
+                  <div class="col-xxl-3 colxl-3 col-lg-3 col-md-6 mb-1 mb-md-0 text-center">
+                    <h2><%= RunningdOrder %></h2>
+                    <h2>Case running</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end grid Column -->
+        </div>
+            <!-- end Grid row -->
+      </div>
+          <!-- end container -->
+    </div>
+    <!-- End count -->
+
+
+  
+    <%- include("_footer") %>
+    <script src="/Vendor/js/Search.js"></script>
+    <%- include("_end") %>
+

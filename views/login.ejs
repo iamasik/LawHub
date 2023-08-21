@@ -1,0 +1,82 @@
+<%- include("_start") %>
+    <!-- Logo section -->
+    <div class="logo-container">
+       <a href="/"> <img src="./Asset/Logo/icontext.png" alt="icontext" /></a>
+      </div>
+      <!-- End Logo section -->
+  
+      <!-- Login Form Start -->
+      <div class="login-form-wrapper">
+        <div class="login-form-container-main container">
+          <div class="row">
+            <div
+              class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-12 col-12"
+            ></div>
+            <div
+              class="login-form-container col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12"
+            >
+              <div class="top">
+                <div class="title">
+                  <h5>Login</h5>
+                  <p><strong>Sign in to your account</strong></p>
+                </div>
+                <div class="sign-google">
+                  <a href="#"
+                    ><img src="./Asset/icons/google.png" alt="google" />Sign in
+                    with Goole</a
+                  >
+                </div>
+              </div>
+
+  
+              <!-- Or section -->
+              <div class="or-section" style="padding: 20px"></div>
+              <!-- end Or section -->
+              <div class="message" style="text-align: center;">
+
+              </div>
+              <!-- login Form -->
+              <div class="login-form-wrapper">
+                <form class="login" action="#" method="post">
+                  <div class="usname">
+                      <i class="icon-mid fa-solid fa-user"></i>
+                      <input type="email" name="email" id="email" placeholder="Enter your email.." required>
+                  </div>
+  
+                  <div class="password-container">
+                      <i class=""></i>
+                      <i class="icon-mid fa-solid fa-lock"></i>
+                      <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+                  </div>
+                  
+                  <div class="check-wrapper">
+                      <input type="checkbox" name="remember" id="remember">
+                      <label for="remember">Remember me</label>
+                      <a href="#">forgot Password?</a>
+                  </div>
+  
+                  <div class="login-submit">
+                      <input type="submit" value="Login">
+                  </div>
+                </form>
+              </div>
+              <!-- login Form -->
+  
+              <!-- Create account section -->
+              <div class="not-reg create-new">
+                  <strong>Not Register yet? <a href="#" target="_blank"><strong>Create an Account</strong></a></strong>
+              </div>
+              <!-- End Create account section -->
+            </div>
+            <div
+              class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-12 col-12"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <!-- Login Form End -->
+  
+    
+      <%- include("_footer") %>
+      <script src="/Vendor/js/login.js"></script>
+      <%- include("_end") %>

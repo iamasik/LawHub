@@ -1,0 +1,97 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+
+    <!-- Content -->
+    <div class="order-content">
+        <!-- grid container -->
+        <div class="container">
+          <!-- row 1 -->
+          <div class="row gx-5 gy-4">
+            <!-- grid column -->
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-12 col-12">
+              <div class="case-id-container">
+                <h6  style="text-align: center; padding-bottom: 15px;">Case ID: <span id="CaseID"><%= OrdersInfo.id %></span></h6>
+                <h6 style="text-align: center;">Case Details:</h6>
+                <div class="text-container">
+                  <div class="text-content">
+                    <p class="text"><b>Title: </b><%= OrdersInfo.Gig.title %></p>
+                    <% if (user.userRole==="Lawyer") { %>
+                        <p class="text"><b>Client Name: </b><%= OrdersInfo.Client.name %></p>
+                    <% } %>
+                    <% if (user.userRole==="Buyer") { %>
+                        <p class="text"><b>Lawyer Name: </b><%= OrdersInfo.Lawyer.name %></p>
+                    <% } %>
+                    
+                    <p class="text"><b>Status: </b><%= OrdersInfo.Status %></p>
+
+                    
+  
+                    <p class="fee"> <span style="font-weight: bold; color: white;">Fees: </span><%= OrdersInfo.Gig.price %> </p>
+                    <p class="schedule" style="font-size: 16px;"> <span style="font-weight: bold; color: white;">Next Meeting: </span>Under construction...</p>
+                    <p class="schedule" style="font-size: 16px;"> <span style="font-weight: bold; color: white;">Next Hearing: </span>Under construction...</p>
+                  </div>
+                  
+                </div>
+              </div>
+              <div class="order_twoBtn" style="text-align: center !important;">
+                <% if (OrdersInfo.Status==="Running" && user.userRole==="Lawyer") { %>
+                    <button type="button" class="btn waiting">Done</button>
+                <% } %>
+                <% if (OrdersInfo.Status==="Running" && user.userRole==="Buyer") { %>
+                    <button type="button" style="width: 250px;" class="btn Support">Contact Support</button>
+                <% } %>
+                <% if (OrdersInfo.Status==="Waiting" && user.userRole==="Lawyer") { %>
+                    <button type="button" style="width: 250px;" class="btn Support">Contact Support</button>
+                <% } %>
+                <% if (OrdersInfo.Status==="Waiting" && user.userRole==="Buyer") { %>
+                    <button type="button" class="btn complete">Done</button>
+                <% } %>
+                <% if (OrdersInfo.Status==="Waiting" && user.userRole==="Buyer") { %>
+                    <button type="button" class="btn review">Review</button>
+                <% } %>
+
+              </div>
+
+
+
+            </div>
+            <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+              <div class="right-container-top">
+                <div class="current-phase pl-30">
+                  <p class="text"><span style="font-weight: bold; ">Current Phase: </span> <span style="font-size: 24px;">Under construction...</span></p>
+                </div>
+                <div class="payment-type pl-30">
+                  <p class="text"><span style="font-weight: bold;">Current Phase: </span><span style="font-size: 24px;">Under construction...</span></p>
+                </div>
+                <div class="four-col-container">
+                  <!-- 4 column secton will be completed after load-sheading -->
+                </div>
+                <div class="calling">
+                  <a  style="color: #000000; text-decoration: none;">Under construction...</a>
+                </div>
+              </div>
+  
+              <div class="right-container-bottom form-floating mb-3">
+                <form action="" method="post">
+                  <div class="input-group">
+                    <i class="icon_attach fa-sharp fa-solid fa-paperclip"></i>
+                    <input class="input_deco" id="" name="" type="text" height="" />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- end grid column -->
+          </div>
+          <!-- end row 1 -->
+        </div>
+        <!-- end grid container -->
+      </div>
+      <!-- end Content -->
+
+
+
+
+<%- include("_footer") %>
+<script src="/Vendor/js/order.js"></script>
+<%- include("_end") %>

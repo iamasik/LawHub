@@ -1,0 +1,56 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+
+
+
+    <!-- start 2 section container -->
+    <div class="contactus-container container">
+        <div class="row">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+
+            <!-- Side a 1 kore bad deyar pore workspace below -->
+            <div class="contactus-wraper col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <div>
+                    <div class="container">
+                        <div class="row gy-3">
+
+                            <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div>
+                                    <a href="/CreateJobs" style="background-color: #000000; color: #ffffff; text-decoration: none; border-radius: 30px;"><button type="button" style="padding: 10px 20px; border-radius: 30px; background-color: #000000; color: #ffffff; text-decoration: none; ">Create New Jobs</button></a>
+                                </div>                   
+                            </div>
+                            <% for (let i = 0; i < Myjobs.length; i++) { %>
+
+                                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="a-jbs-wrapper">
+                                        <div class="a-jbs-container">
+                                            <div class="title">Title: <%= Myjobs[i].title %></div>
+                                            <div class="category">Category: <%= Myjobs[i].catagory.name %></div>
+                                            <div class="name">Description: <%= Myjobs[i].description %></div>
+                                            <div class="Price">Price: <%= Myjobs[i].price %></div>
+                                            <a href="/Modify/<%= Myjobs[i].id %>"><button type="button">View</button></a>
+                                        </div>
+                                    </div>                        
+                                </div>
+
+
+                              <% } %>
+
+
+
+
+
+  
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+        </div>
+    </div>
+    <!-- start 2 section container -->
+
+
+<%- include("_footer") %>
+<%- include("_end") %>

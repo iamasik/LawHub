@@ -1,0 +1,113 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+    <!-- Form Title -->
+    <div style="margin-top: 30px;">
+    </div>
+    <!-- End Form Title -->
+
+    <!-- Form Start -->
+    <div class="reg-form-wrapper">
+      <div class="form-container container">
+        <div class="row">
+          <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12"></div>
+          <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12">
+
+            <div class="container">
+              <div class="message" style="text-align: center;">
+
+              </div>
+              <div class="row gy-3">
+                <div class="left col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                  <div class="update-form-container">
+                    <form class="UpdateUser" action="#" method="post">
+
+                     <div class="content content1">
+                      <label for="Name">Name:</label><br>
+                      <input type="text" name="Name" id="Name" value="<%= user.name %>" placeholder="Write Your Name">
+                     </div>
+
+                     <div class="content content2">
+                      <label for="Phone">Phone:</label><br>
+                      <input type="text" name="Phone" id="Phone" value="<%= user.phone %>" placeholder="+8801783001045">
+                     </div>
+
+                     <div class="content content3">
+                      <label for="nid_bc">National ID / Birth Certificate:</label><br>
+                      <input type="text" name="nid_bc" id="nid_bc" value="<%= user.identityNo %>" placeholder="Enter Your N_ID or Birth Certificate">
+                     </div>
+
+                     <div class="content content4">
+                      <label class="label-same" for="district">District:</label><br>
+                      <select name="district" id="district">
+                        <option value="<%= user.district %>"><%= user.district %></option>
+                        <% for (let i = 0; i < Districs.length; i++) { %>
+                          <option value="<%= Districs[i] %>"><%= Districs[i] %></option>
+                        <% } %>
+                        
+                      </select>
+                     </div>
+
+                     <div class="content content5">
+                      <label class="label-same" for="upazila">Upazila:</label><br>
+                      <input class="input-same" type="text" name="service-price" value="<%= user.upzilla %>" id="upazila" placeholder="Enter Your Upazila Name">
+                     </div>
+                     <div class="content content5">
+                      <label class="label-same" for="upazila">Post Office:</label><br>
+                      <input class="input-same" type="text" name="postoffice" value="<%= user.postOffice %>" id="postoffice" placeholder="Enter Your postoffice Name">
+                     </div>
+
+                     <div class="content content6">
+                      <label class="label-same" for="Address">Address:</label><br>
+                      <textarea class="" name="Address" id="Address" placeholder="Write Your Address"><%= user.address %></textarea>
+                     </div>
+
+                    
+                     <div class="content content3">
+                      <input class="s_btn" type="submit" value="Update">
+                    </div>
+
+                    </form>
+                  </div>
+                </div>
+
+                <div class=" col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12" style="display: flex; align-items: center; justify-content: center;">
+                  <div style="width: 2px; background-color: #2f8f9d; height: 100%;"></div>
+                </div>
+
+                <div class="right col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12" >
+                  <div class="update-form-container">
+                    <form class="UpdatePass" action="#" method="post">
+                     <div class="content content1">
+                      <label for="Password">Old Password:</label><br>
+                      <input type="password" name="oldPassword" id="oldPassword" >
+                     </div>
+                     <div class="content content1">
+                      <label for="Password">Password:</label><br>
+                      <input type="password" name="Password" id="Password">
+                     </div>
+                     <div class="content content2">
+                      <label for="C_Password">Confirm Password:</label><br>
+                        <input type="password" name="C_Password" id="C_Password"><br>
+                      </div>
+                      <div class="content content3">
+                        <input class="s_btn" type="submit" value="Update">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Form End -->
+
+
+
+<%- include("_footer") %>
+<script src="/Vendor/js/updateUser.js"></script>
+<%- include("_end") %>

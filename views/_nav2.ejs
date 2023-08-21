@@ -1,0 +1,79 @@
+<% if (user) { %>
+    <!-- Nav bar -->
+    <nav class="mainNav">
+      <div class="inside img_logo_container">
+        <img src="/Asset/Logo/justice.png" alt="" />
+      </div>
+      <div class="container-xxl container-xl container-lg container-md container-sm">
+        <div class="row">
+          <div class="left_container col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="inside txt_logo_container"><p>LAWHUB</p></div>
+
+
+
+          </div>
+          <div class="right col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="profile-notifications" style="width: 100%;">
+                <a href="" target="_self"><img class="same" src="/Asset/icons/msg.png" alt="Message"></a>
+                <a href="" target="_self"><img class="same" src="/Asset/icons/notification.png" alt="Notification"></a>
+                <!-- <a href="" target="_self"><img class="profile" src="/Asset/icons/profile.png" alt="Profile"></a> -->
+                <div class="profile-container">
+                  <div class="profile-drpodown-wrapper">
+                    <ul>
+                      <li>
+                        <a  target="_self"><img class="profile" src="/Asset/icons/profile.png" alt="Profile"></a>
+                        <ul>
+                          <li><a href="/AuthUserInfo" target="_self">Profile</a></li>
+                          <li><a href="/Settings" target="_self">Settings</a></li>
+                          <li><a href="/OrderList" target="_self">View Order</a></li>
+                          <% if (user.userRole === 'Lawyer') { %>
+                            <li><a href="/Alljobs" target="_self">Manage Jobs</a></li>
+                          <% } %>
+                          <li><a class="logout" style="cursor: pointer;" target="_self">Logout</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav bar -->
+
+
+  <% } else { %>
+  <!-- Nav bar -->
+  <nav class="mainNav">
+    <div class="inside img_logo_container">
+      <img src="/Asset/Logo/justice.png" alt="" />
+    </div>
+    <div class="container-xxl container-xl container-lg container-md container-sm">
+      <div class="row">
+        <div class="left_container col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="inside txt_logo_container"><p>LAWHUB</p></div>
+
+        </div>
+        <div class="right col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <div class="login_container container">
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6 login_logout_container">
+                <div class="twobtns">
+                  <div class="lsb">
+                    <a href="/login"><img src="/Asset/icons/signin2.png" alt="l" /> Log in</a>
+                  </div>
+                  <div class="rsb">
+                    <a href="/SingUp"> Sign Up</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End Nav bar -->
+  <% } %>

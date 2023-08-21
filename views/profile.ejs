@@ -1,0 +1,116 @@
+<%- include("_start") %>
+<%- include("_nav") %>
+
+    <!-- Content -->
+    <div class="userdetails-content mt-100">
+        <!-- grid container -->
+        <div class="container">
+          <!-- row 1 -->
+          <div class="row gx-5 gy-4">
+            <!-- grid columns -->
+            <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+            <div class="userdetails-wrapper col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                <div class="container">
+                    <div class="row gx-2 gy-2">
+                        <div class="left-container col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                            <!-- Image section -->
+                            <div class="pro-img">
+                                <img src="./Asset/images/human.png" alt="Profile Image">
+                            </div>
+                            <div class="education-container">
+                                <div class="education">
+                                    <h5>Edication</h5>
+                                </div>
+                                <div class="academic">
+                                    <h5>----</h5>
+                                    <h5>----</h5>
+                                </div>
+                            </div>
+                            <div class="work-container">
+                                <div class="work">
+                                    <h5>Work</h5>
+                                </div>
+                                <div class="workplace">
+                                    <h5>----</h5>
+                                </div>
+                                <div class="designation">
+                                    <h5>---- </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ud-right-container col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                            <div class="ud-rihgt-wrapper">
+                                <div class="name">
+                                    <h3><%= user.name %></h3>
+                                </div>
+                                <div class="post">
+                                  <% if (user.userRole==="Buyer") { %>
+                                    <h4>User account</h4>
+                                <% } %>
+                                  <% if (user.userRole==="Lawyer") { %>
+                                    <h4>Lawyer account</h4>
+                                <% } %>
+
+                                    
+                                </div>
+
+                                <div class="about-container">
+                                    <div class="about">
+                                      <i class="icon-user fa-sharp fa-solid fa-user"></i>
+                                        <span class="about-text">About</span>
+                                    </div>
+                                </div>
+                                <div class="contact-info-container">
+                                  Contact information
+                                </div>
+                                <!-- Details table -->
+                                <div class="user-details">
+                                  <table>
+                                    <tr class="space">
+                                      <td class="w-30prc">Phone: </td>
+                                      
+                                      <td> <a href="tel:<%= user.phone %>" style="text-decoration: none; color: #3BACB6;"><%= user.phone %></a></td>
+                                    </tr>
+
+                                    <tr class="space">
+                                      <td class="w-30prc">Address: </td>
+                                      
+                                      <td><%= user.address %></td>
+                                    </tr>
+
+                                    <tr class="space">
+                                      <td class="w-30prc">Email: </td>
+                                      
+                                      <td><a href="mailto:<%= user.email %>" style="text-decoration: none; color: #3BACB6;"><%= user.email %></a></td>
+                                    </tr>
+
+                                    <tr class="space">
+                                      <td class="w-30prc">Date of Birth: </td>
+  
+                                      <td><%= user.dateOfBirth %></td>
+                                    </tr>
+
+                                    <tr class="space">
+                                      <td class="w-30prc">Gender: </td>
+  
+                                      <td><%= user.gender %></td>
+                                    </tr>
+                                  </table>
+                                </div>
+                                <!-- End Details table -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+          </div>
+          <!-- End row 1 -->
+        </div>
+    </div>
+    <!-- Content -->
+
+
+<%- include("_footer") %>
+<%- include("_end") %>

@@ -1,0 +1,63 @@
+<%- include("_start") %>
+<%- include("_nav2") %>
+
+
+
+    <!-- start 2 section container -->
+    <div class="contactus-container container">
+        <div class="row">
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+
+            <!-- Side a 1 kore bad deyar pore workspace below -->
+            <div class="contactus-wraper col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <div>
+                    <div class="container us-info-pd">
+                        <div class="row gy-3">
+                            <div style="padding-bottom: 20px;" class="job-info-site-info col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="con-info-wrapper">
+                                    <div class="con-info">
+                                        <h4>Job-Information</h4>
+                                        <div class="message" style="text-align: center;">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="job-info-attribute Title">
+                                    <div>Title: </div>
+                                    <div ><%= JobInfo.title %></div>
+                                </div>
+
+                                <div class="job-info-attribute Category">
+                                  <div>Category:</div>
+                                  <div ><%= JobInfo.catagory.name %></div>
+                                </div>
+
+                                <div class="job-info-attribute Descriotion">
+                                    <div>Descriotion:</div>
+                                    <div><%= JobInfo.description %></div>
+                                </div>
+
+                                <div class="job-info-attribute Price">
+                                    <div>Price:</div>
+                                    <div><%= JobInfo.price %></div>
+                                </div>
+
+
+                                <button type="button" value="<%= JobInfo.userId.id %>/<%= JobInfo.id %>" id="gigsubmit" class="btn btn-dark">Place the order</button>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12"></div>
+        </div>
+    </div>
+    <!-- start 2 section container -->
+
+
+<%- include("_footer") %>
+<script src="/Vendor/js/gigDetails.js"></script>
+<%- include("_end") %>
