@@ -1,0 +1,110 @@
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .link-deco ul li {
+    list-style: none;
+  }
+  .link-deco-border {
+    border: none;
+    padding-bottom: 4%;
+  }
+  .link-deco .footer-mob-ul ul {
+    text-align: left;
+  }
+  .link-deco-container {
+    padding-left: 0%;
+  }
+
+  /* ::::::::::::::::::::::: Admin pannel ::::::::::::::::::::::::::::::: */
+  #chart_div {
+    width: 400px;
+    height: 100px;
+  }
+  /* ::::::::::::::::::::::: End Admin pannel ::::::::::::::::::::::::::::::: */
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* count */
+  .container .row .mob-pdb {
+    padding-bottom: 40px;
+  }
+  /* end count */
+  .link-deco ul li {
+    list-style: none;
+  }
+  .link-deco-border {
+    border: none;
+    padding-bottom: 4%;
+  }
+  .link-deco .footer-mob-ul ul {
+    text-align: left;
+  }
+  .link-deco-container {
+    padding-left: 0%;
+  }
+
+  /* ::::::::::::::::::::::: Admin pannel ::::::::::::::::::::::::::::::: */
+  #chart_div {
+    width: 580px;
+    height: 400px;
+  }
+  /* ::::::::::::::::::::::: End Admin pannel ::::::::::::::::::::::::::::::: */
+
+  /* ::::::::::::::::::::::: start User Details ::::::::::::::::::::::::::::::: */
+
+  /* ::::::::::::::::::::::: End User Details ::::::::::::::::::::::::::::::: */
+
+  /* _____________________________________________________________________________________ */
+
+  /* ::::::::::::::::::::::: Start Contact Us ::::::::::::::::::::::::::::::: */
+
+  .contactus-container .row .contactus-wraper .container .row .site-info {
+    border-radius: 20px 20px 0px 0px;
+  }
+  /* ::::::::::::::::::::::: End Contact Us ::::::::::::::::::::::::::::::: */
+
+  /* _______________________________________ Registration Form ________________________________ */
+.reg-form-flex-container{
+  display: flex;
+  align-items: flex-start;
+}
+.reg-form-flex-container .item-1{
+  order: 1;
+}
+  /* _______________________________________ End Regustration Form ________________________________ */
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  /* count */
+  .container .row .pdb {
+    padding-bottom: 40px;
+  }
+
+  /* Emd count */
+
+  .link-deco-border {
+    border: none;
+    padding-bottom: 4%;
+  }
+  .link-deco ul li {
+    list-style: none;
+  }
+  .link-deco-container {
+    padding-left: 0%;
+  }
+  .footer-last-row div .social-links {
+    padding-left: 0px;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
+
+/* // XX-Large devices (larger desktops) */
+/* // No media query since the xxl breakpoint has no upper bound on its width */
